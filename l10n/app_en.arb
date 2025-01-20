@@ -1,0 +1,8 @@
+{
+  "loginInApp": "Log in to the app",
+  "login": "Login",
+  "loginDescription": "It's just some text that is sometimes shown on the login page of the application so that the user understands something there.",
+  "authZone": "Authenticated zone",
+  "infoPageDescription":"Information page in the auth zone"
+
+}
