@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
         ),
         body: BlocBuilder<LoginBloc, LoginState>(
           builder: (context, state) {
-            if (state is LoginLoading){
+            if (state is LoginLoading) {
               return const Center(
                 child: CircularProgressIndicator(),
               );
@@ -45,7 +45,7 @@ class LoginPage extends StatelessWidget {
                     child: SizedBox(
                       width: double.infinity,
                       child: Text(
-                          localization.login,
+                        localization.login,
                         textAlign: TextAlign.center,
                       ),
                     ),

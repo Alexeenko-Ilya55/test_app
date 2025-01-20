@@ -6,7 +6,6 @@ import 'package:flutter_gen/gen_l10n/localization.dart';
 class InfoPage extends StatelessWidget {
   const InfoPage({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     final localization = Localization.of(context)!;
