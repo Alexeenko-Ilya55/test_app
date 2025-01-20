@@ -25,8 +25,7 @@ class TestApp extends StatelessWidget {
           ),
           localizationsDelegates: Localization.localizationsDelegates,
           supportedLocales: Localization.supportedLocales,
-          routerDelegate: router.delegate(),
-          routeInformationParser: router.defaultRouteParser(),
+          routerConfig: router.config(),
         );
       },
     );
