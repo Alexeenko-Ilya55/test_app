@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/localization.dart';
 import 'package:test_app/core/di/app_module.dart';
+import 'package:test_app/core/navigation/auth_routers/auth_router.gr.dart';
 import 'package:test_app/core/theme/common_size.dart';
 import 'package:test_app/not_auth_features/login/presentation/bloc/login_bloc.dart';
 
@@ -49,6 +50,15 @@ class LoginPage extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                     ),
+                  ),
+                ),
+                const SizedBox(height: CommonSize.large),
+                TextButton(
+                  onPressed: () {
+                    context.router.push(const ChangeLanguageRoute());
+                  },
+                  child: Text(
+                    localization.changeLanguage,
                   ),
                 ),
               ],

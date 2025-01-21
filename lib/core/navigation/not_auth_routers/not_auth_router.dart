@@ -15,5 +15,9 @@ class NotAuthRouter extends $NotAuthRouter {
       initial: true,
       path: '/login',
     ),
+    AutoRoute(
+      page: ChangeLanguageRoute.page,
+      path: '/change-language',
+    ),
   ];
 }
