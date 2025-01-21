@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/localization.dart';
 import 'package:test_app/core/di/app_module.dart';
+import 'package:test_app/core/navigation/auth_routers/auth_router.gr.dart';
 import 'package:test_app/core/theme/common_size.dart';
 import 'package:test_app/not_auth_features/login/presentation/bloc/login_bloc.dart';
 
@@ -22,7 +23,7 @@ class LoginPage extends StatelessWidget {
         ),
         body: BlocBuilder<LoginBloc, LoginState>(
           builder: (context, state) {
-            if (state is LoginLoading){
+            if (state is LoginLoading) {
               return const Center(
                 child: CircularProgressIndicator(),
               );
@@ -45,10 +46,19 @@ class LoginPage extends StatelessWidget {
                     child: SizedBox(
                       width: double.infinity,
                       child: Text(
-                          localization.login,
+                        localization.login,
                         textAlign: TextAlign.center,
                       ),
                     ),
+                  ),
+                ),
+                const SizedBox(height: CommonSize.large),
+                TextButton(
+                  onPressed: () {
+                    context.router.push(const ChangeLanguageRoute());
+                  },
+                  child: Text(
+                    localization.changeLanguage,
                   ),
                 ),
               ],

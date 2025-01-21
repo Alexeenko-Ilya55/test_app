@@ -7,3 +7,10 @@ final class UpdateToken extends AppEvent {
 
   UpdateToken(this.newToken);
 }
+
+
+final class ChangeLanguage extends AppEvent {
+  final Locale locale;
+
+  ChangeLanguage(this.locale);
+}
